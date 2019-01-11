@@ -1,6 +1,6 @@
 ## 演示视频
 
-[![Watch the video](./img/1.png)](./Demo.mp4)
+[![Watch the video](./img/1.png)](https://teag1e.github.io/viedo/BurpCollectorDemo.mp4)
 
 ## 0x01 结构
 
