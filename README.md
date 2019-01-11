@@ -1,6 +1,6 @@
 ## 演示视频
 
-<video src='./demo.mp4' controls="controls"></video>
+[![Watch the video](./img/1.png)](./demo.mp4)
 
 ## 0x01 结构
 
