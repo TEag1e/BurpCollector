@@ -2,6 +2,11 @@
 
 [![Watch the video](./img/1.png)](https://teag1e.github.io/viedo/BurpCollectorDemo.mp4)
 
+演示视频：
+
+链接：https://pan.baidu.com/s/1UotjcKmbp-nEjyjfs-AMZA 
+提取码：o43z 
+
 ## 0x01 结构
 
 ![](./img/5.png)
