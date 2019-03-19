@@ -146,7 +146,10 @@ class DataExtractor():
                 continue
 
             # path to log
-            currentPath = '{}\t{}'.format(host, path)
+            try:
+                currentPath = '{}\t{}'.format(host, path)
+            except:
+                continue
             if path and currentPath not in collectionPath:
                 print(currentPath)
                 with open(self._pathLog, 'a')as path_f:
@@ -154,7 +157,10 @@ class DataExtractor():
                 collectionPath.append(currentPath)
 
             # file to log 
-            currentFile = '{}\t{}'.format(host, file)
+            try:
+                currentFile = '{}\t{}'.format(host, file)
+            except:
+                continue
             if file and currentFile not in collectionFile:
                 print(currentFile)
                 with open(self._fileLog, 'a')as file_f:
@@ -164,12 +170,16 @@ class DataExtractor():
             # parameters to log
             paramsObject = requestInfo.getParameters()
             params = self.processParamsObject(paramsObject)
-            currentParams = '{}\t{}'.format(host, ','.join(params))
+            # UnicodeEncodeError
+            try:
+                currentParams = '{}\t{}'.format(host, ','.join(params))
+            except:
+                continue
             if params and currentParams not in collectionParam:
-	                print(currentParams)
-	                with open(self._paramLog, 'a')as params_f:
-	                    params_f.write(currentParams+'\n')
-	                collectionParam.append(currentParams)
+                    print(currentParams)
+                    with open(self._paramLog, 'a')as params_f:
+                        params_f.write(currentParams+'\n')
+                    collectionParam.append(currentParams)
 
     # format path and file
     def formatPathFile(self, path):
