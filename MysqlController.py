@@ -41,10 +41,10 @@ class MysqlController():
         self.dataStorage(dataDict)
 
     def loadMysqlConfig(self):
-    	
-    	with open('../config.ini')as config_f:
-    		mysql_config = json.load(config_f).get('mysql')
 
+        with open('../config.ini')as config_f:
+            mysql_config = json.load(config_f).get('mysql')
+            
         self._host = mysql_config.get('host')
         self._user = mysql_config.get('user')
         self._password = mysql_config.get('password')
